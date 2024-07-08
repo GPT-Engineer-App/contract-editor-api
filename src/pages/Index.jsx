@@ -83,11 +83,15 @@ export default Index;
     font-family: 'Times New Roman', Times, serif;
     color: #333;
     background-color: #fff;
-    padding: 20px;
+    padding: 40px;
     border: 1px solid #ccc;
     border-radius: 8px;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 40px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 210mm; /* A4 width */
+    height: 297mm; /* A4 height */
+    box-sizing: border-box;
   }
 
   .contract-section {
