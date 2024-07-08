@@ -57,18 +57,18 @@ const Index = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="contract-container p-4">
       <h1 className="text-3xl mb-4">Contract with {contractData.tenantName}</h1>
-      <div className="mb-4">
-        <label className="block mb-2">Termination Reason:</label>
+      <div className="contract-section mb-4">
+        <h2 className="section-title">Termination Reason:</h2>
         <Textarea name="cReason" value={contractData.cReason} onChange={handleChange} />
       </div>
-      <div className="mb-4">
-        <label className="block mb-2">Penalty:</label>
+      <div className="contract-section mb-4">
+        <h2 className="section-title">Penalty:</h2>
         <Input name="cutP" value={contractData.cutP} onChange={handleChange} disabled />
       </div>
-      <div className="mb-4">
-        <label className="block mb-2">Termination Date:</label>
+      <div className="contract-section mb-4">
+        <h2 className="section-title">Termination Date:</h2>
         <Input type="date" name="start_date" value={contractData.start_date} onChange={handleChange} />
       </div>
       <Button onClick={updateContractData}>Update Contract</Button>
@@ -77,3 +77,62 @@ const Index = () => {
 };
 
 export default Index;
+
+<style jsx>{`
+  .contract-container {
+    font-family: 'Times New Roman', Times, serif;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .contract-section {
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .contract-container h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .contract-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .contract-container input,
+  .contract-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .contract-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .contract-container button:hover {
+    background-color: #0056b3;
+  }
+`}</style>
